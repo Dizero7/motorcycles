@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Poppins:wght@400;500&display=swap");
+body {
+  font-family: $font-primary;
+  color: $primary;
+}
+.container {
+  padding: 0 15px;
+  max-width: 1230px;
+  margin: 0 auto;
+  color: $light;
+}
+a {
+  color: $light;
+  transition: 0.2s ease-in;
+  &:hover {
+    color: $light-hover;
+  }
+}
+.btn {
+  padding: 1rem 1.5rem;
+  background-color: $primary;
+  transition: 0.2s ease-in;
+	text-transform: uppercase;
+	font-family: $font-secondary;
+	border-radius: 7px;
+  &:hover {
+    background-color: $dark;
+  }
+}
