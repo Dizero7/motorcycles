@@ -1,0 +1,19 @@
+.instagram {
+	padding: 1rem 0;
+	overflow: hidden;
+  &__carousel {
+    display: flex;
+    align-items: center;
+		width: max-content;
+    gap: 10px;
+    animation: scroll 45s linear infinite;
+		& img{
+			max-width: 180px;
+		}
+  }
+}
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 5px));
+  }
+}

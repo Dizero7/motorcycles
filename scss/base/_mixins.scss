@@ -1,0 +1,22 @@
+@mixin stripBefore {
+	position: absolute;
+				content: "";
+				width: 100%;
+				max-width: 100px;
+				height: 5px;
+				top: 50%;
+				left: 100%;
+				border-top: 1px solid $text;
+				border-bottom: 1px solid $text;
+}
+@mixin stripAfter{
+	position: absolute;
+				content: "";
+				width: 100%;
+				max-width: 100px;
+				height: 5px;
+				top: 50%;
+				right: 100%;
+				border-top: 1px solid $text;
+				border-bottom: 1px solid $text;
+}

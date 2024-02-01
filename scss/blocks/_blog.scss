@@ -1,0 +1,80 @@
+.blog {
+	padding: 5rem 0;
+	&__title {
+	}
+
+	&__cards {
+		padding-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		color: $dark;
+		
+	}
+}
+
+
+.card {
+	position: relative;
+	overflow: hidden;
+	
+	&__image {
+	}
+
+	&__description {
+		padding: 1rem;
+	}
+
+	&__header {
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid $dark;
+
+	}
+
+	&__date {
+		color: $text;
+		font-family: $font-secondary;
+	}
+
+	&__comments {
+		color: $text;
+		font-family: $font-secondary;
+
+	}
+
+	&__content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 100%;
+		padding: 2rem;
+    background-color: rgba(22, 22, 22, 0.95);
+		transition: 0.5s;
+	}
+
+	&__content-header {
+		color: $light;
+		font-size: 1.5rem;
+    font-weight: 400;
+	}
+
+	&__text {
+		color: $text;
+		font-family: $font-secondary;
+	}
+}
+
+.card:hover .card__content {
+	top: 0;
+	
+}

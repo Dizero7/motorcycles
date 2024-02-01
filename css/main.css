@@ -113,8 +113,8 @@ body {
 }
 
 .container {
-  padding: 0 15px;
-  max-width: 1230px;
+  padding: 0 30px;
+  max-width: 1260px;
   margin: 0 auto;
   color: #ffffff;
 }
@@ -134,9 +134,43 @@ a:hover {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   border-radius: 7px;
+  color: #ffffff;
+  font-size: 0.9rem;
 }
 .btn:hover {
   background-color: #000000;
+}
+
+.section__header {
+  color: #000000;
+  font-size: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: 0 1rem;
+  position: relative;
+}
+.section__header::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 100px;
+  height: 5px;
+  top: 50%;
+  left: 100%;
+  border-top: 1px solid #767268;
+  border-bottom: 1px solid #767268;
+}
+.section__header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 100px;
+  height: 5px;
+  top: 50%;
+  right: 100%;
+  border-top: 1px solid #767268;
+  border-bottom: 1px solid #767268;
 }
 
 .header {
@@ -183,7 +217,7 @@ nav {
 }
 
 .about {
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 .about__banner {
   display: grid;
@@ -208,45 +242,12 @@ nav {
   gap: 5px;
   margin-bottom: 5rem;
 }
-.about__text {
+.about__content {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
-.about__text h2 {
-  color: #000000;
-  font-size: 2rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 1rem;
-  padding: 0 1rem;
-  position: relative;
-}
-.about__text h2::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  max-width: 100px;
-  height: 5px;
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
-  border-top: 1px solid #767268;
-  border-bottom: 1px solid #767268;
-}
-.about__text h2::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  max-width: 100px;
-  height: 5px;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  border-top: 1px solid #767268;
-  border-bottom: 1px solid #767268;
-}
-.about__text p {
+.about__content p {
   color: #767268;
   line-height: 1.75;
   font-family: "Poppins", sans-serif;
@@ -283,4 +284,136 @@ nav {
   display: grid;
   place-content: center;
   padding: 1rem;
+}
+
+.feature {
+  padding: 5rem 0;
+  position: relative;
+}
+.feature::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/feature/feature-bg.jpg);
+  z-index: -1;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.feature__accent {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  color: #b82049;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.feature__title {
+  color: #ffffff;
+}
+.feature__grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+.feature__content {
+  padding: 2rem;
+  background-color: #ffffff;
+  transform: translateX(2rem);
+}
+.feature__content p {
+  color: #161616;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 1rem;
+}
+.feature__video {
+  width: 100%;
+}
+
+.blog {
+  padding: 5rem 0;
+}
+.blog__cards {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  color: #000000;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card__description {
+  padding: 1rem;
+}
+.card__header {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.card__footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #000000;
+}
+.card__date {
+  color: #767268;
+  font-family: "Poppins", sans-serif;
+}
+.card__comments {
+  color: #767268;
+  font-family: "Poppins", sans-serif;
+}
+.card__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  padding: 2rem;
+  background-color: rgba(22, 22, 22, 0.95);
+  transition: 0.5s;
+}
+.card__content-header {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.card__text {
+  color: #767268;
+  font-family: "Poppins", sans-serif;
+}
+
+.card:hover .card__content {
+  top: 0;
+}
+
+.instagram {
+  padding: 1rem 0;
+  overflow: hidden;
+}
+.instagram__carousel {
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 10px;
+  animation: scroll 45s linear infinite;
+}
+.instagram__carousel img {
+  max-width: 180px;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 5px));
+  }
 }
