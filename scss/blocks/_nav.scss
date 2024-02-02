@@ -2,19 +2,71 @@ nav {
   padding: 2.5rem 1rem;
   max-width: 900px;
   margin: 0 auto;
+	z-index: 7;
+  @include mediaTablet {
+    position: fixed;
+    padding: 0;
+    width: 100%;
+  }
 }
 .nav__links {
-	max-height: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-	width: 100%;
-	& a{
-		font-size: 1.3rem;
-
-	}
+  width: 100%;
+  & a {
+    font-size: 1.3rem;
+  }
+  & li {
+  }
+  @include mediaTablet {
+    display: flex;
+    position: absolute;
+    width: 100%;
+		gap: 2rem;
+    padding: 2rem;
+		background-color: $primary;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    z-index: -1;
+  }
 }
 .nav__logo {
   max-width: 180px;
-	max-height: 70px;
+  max-height: 70px;
+  @include mediaTablet {
+    display: none;
+  }
+}
+
+.nav-adaptive {
+  display: none;
+  @include mediaTablet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $dark;
+
+    &__logo {
+      & img {
+        max-width: 130px;
+      }
+    }
+
+    &__button {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $light;
+    }
+  }
+}
+
+.nav__links.open {
+  display: flex;
+	gap: 2rem;
+  transform: translateY(0);
 }

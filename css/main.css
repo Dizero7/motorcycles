@@ -198,10 +198,17 @@ nav {
   padding: 2.5rem 1rem;
   max-width: 900px;
   margin: 0 auto;
+  z-index: 7;
+}
+@media screen and (max-width: 767px) {
+  nav {
+    position: fixed;
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .nav__links {
-  max-height: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -210,10 +217,58 @@ nav {
 .nav__links a {
   font-size: 1.3rem;
 }
+@media screen and (max-width: 767px) {
+  .nav__links {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #161616;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    z-index: -1;
+  }
+}
 
 .nav__logo {
   max-width: 180px;
   max-height: 70px;
+}
+@media screen and (max-width: 767px) {
+  .nav__logo {
+    display: none;
+  }
+}
+
+.nav-adaptive {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .nav-adaptive {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000;
+  }
+  .nav-adaptive__logo img {
+    max-width: 130px;
+  }
+  .nav-adaptive__button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+}
+
+.nav__links.open {
+  display: flex;
+  gap: 2rem;
+  transform: translateY(0);
 }
 
 .about {
