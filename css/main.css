@@ -417,3 +417,87 @@ nav {
     transform: translateX(calc(-50% - 5px));
   }
 }
+.footer {
+  background-color: #161616;
+  padding: 5rem 0 2.5rem;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.footer__button {
+  cursor: pointer;
+}
+.footer__button:hover {
+  background-color: #d29819;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signup__header {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.signup__text {
+  color: #767268;
+  font-family: "Poppins", sans-serif;
+}
+.signup__form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 22rem;
+  height: 3.5rem;
+  padding: 2rem 0.3rem 2rem 0.7rem;
+  background-color: #000000;
+  align-items: center;
+  border-radius: 5px;
+}
+.signup__form input {
+  width: 75%;
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+}
+.media__logo {
+  display: block;
+  padding: 2rem 0;
+  text-align: center;
+}
+.media__logo img {
+  max-width: 14rem;
+}
+.media__links {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  font-size: 2rem;
+}
+.media__copyright {
+  color: #767268;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.contacts__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.contacts p, .contacts a {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  color: #767268;
+}
+.contacts p span, .contacts a span {
+  margin-right: 1rem;
+}

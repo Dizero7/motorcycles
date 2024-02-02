@@ -1,0 +1,98 @@
+.footer {
+  background-color: $primary;
+  padding: 5rem 0 2.5rem;
+  &__grid {
+    display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		
+    gap: 2rem;
+  }
+	&__button {
+		
+		cursor: pointer;
+		&:hover{
+			background-color: $light-hover;
+		}
+	}
+}
+.signup {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+  &__header {
+		font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__text {
+		color: $text;
+		font-family: $font-secondary;
+  }
+
+  &__form {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 22rem;
+		height: 3.5rem;
+		padding: 2rem 0.3rem 2rem 0.7rem;
+		background-color: $dark;
+		align-items: center;
+		border-radius: 5px;
+		& input {
+			width: 75%;
+		}
+  }
+}
+
+.media {
+	display: flex;
+	flex-direction: column;
+  &__logo {
+		
+		
+		display: block;
+		padding: 2rem 0;
+		text-align: center;
+		
+    & img {
+			max-width: 14rem;
+			
+			
+    }
+  }
+
+  &__links {
+		display: flex;
+		justify-content: center;
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+		gap: 1rem;
+		font-size: 2rem;
+  }
+
+  &__copyright {
+		color: $text;
+		font-family: $font-secondary;
+		text-align: center;
+  }
+}
+
+.contacts {
+  &__title {
+		font-size: 1.5rem;
+    font-weight: 400;
+		padding-bottom: 1rem;
+  }
+
+  & p, a {
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+		font-family: $font-secondary;
+		color: $text;
+
+		& span {
+			margin-right: 1rem;
+		}
+	}
+}
