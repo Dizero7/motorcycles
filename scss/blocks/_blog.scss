@@ -1,5 +1,5 @@
 .blog {
-	padding: 5rem 0;
+	padding: 2rem 0;
 	&__title {
 	}
 
@@ -9,7 +9,9 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1rem;
 		color: $dark;
-		
+		@include mediaTablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }
 
@@ -32,6 +34,7 @@
 
 	&__footer {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		gap: 1rem;
 

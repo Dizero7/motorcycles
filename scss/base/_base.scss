@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Poppins:wght@400;500&display=swap");
+html {
+	
+}
 body {
   font-family: $font-primary;
   color: $primary;
+	
 }
 .container {
   padding: 0 30px;
