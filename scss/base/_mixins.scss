@@ -1,27 +1,38 @@
 @mixin stripBefore {
-	position: absolute;
-				content: "";
-				width: 100%;
-				max-width: 100px;
-				height: 5px;
-				top: 50%;
-				left: 100%;
-				border-top: 1px solid $text;
-				border-bottom: 1px solid $text;
-}
-@mixin stripAfter{
-	position: absolute;
-				content: "";
-				width: 100%;
-				max-width: 100px;
-				height: 5px;
-				top: 50%;
-				right: 100%;
-				border-top: 1px solid $text;
-				border-bottom: 1px solid $text;
-}
-@mixin mediaTablet{
-	@media screen and (max-width: $tablet) {
-		@content;
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 100px;
+  height: 5px;
+  top: 50%;
+  left: 100%;
+  border-top: 1px solid $text;
+  border-bottom: 1px solid $text;
+	@include mediaMobile {
+		max-width: 50px;
 	}
+}
+@mixin stripAfter {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 100px;
+  height: 5px;
+  top: 50%;
+  right: 100%;
+  border-top: 1px solid $text;
+  border-bottom: 1px solid $text;
+	@include mediaMobile {
+		max-width: 50px;
+	}
+}
+@mixin mediaTablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mediaMobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
 }

@@ -12,6 +12,9 @@
 		@include mediaTablet {
 			grid-template-columns: repeat(2, 1fr);
 		}
+		@include mediaMobile{
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }
 
@@ -19,12 +22,16 @@
 .card {
 	position: relative;
 	overflow: hidden;
-	
+	display: grid;
 	&__image {
 	}
 
 	&__description {
 		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		
 	}
 
 	&__header {

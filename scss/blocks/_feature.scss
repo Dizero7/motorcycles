@@ -1,6 +1,9 @@
 .feature {
   padding: 5rem 0;
   position: relative;
+	@include mediaTablet {
+		padding: 3rem 0;
+	}
   &::before {
     position: absolute;
     content: "";
