@@ -26,9 +26,12 @@
       background-color: $dark;
       background-position: center center;
       background-size: cover;
+			& h3 {
+				-webkit-text-stroke: 1px $dark;
+			}
       &:nth-child(1) {
         background-image: url(../img/about/banner-1.jpg);
-      }
+				}
       &:nth-child(4) {
         background-image: url(../img/about/banner-2.jpg);
       }

@@ -129,7 +129,7 @@ a {
   transition: 0.2s ease-in;
 }
 a:hover {
-  color: #d29819;
+  color: #f5f5dc;
 }
 
 .btn {
@@ -235,7 +235,7 @@ nav {
   width: 100%;
 }
 .nav__links a {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 @media screen and (max-width: 767px) {
   .nav__links {
@@ -325,6 +325,9 @@ nav {
   background-color: #000000;
   background-position: center center;
   background-size: cover;
+}
+.about__banner a h3 {
+  -webkit-text-stroke: 1px #000000;
 }
 .about__banner a:nth-child(1) {
   background-image: url(../img/about/banner-1.jpg);
@@ -617,7 +620,8 @@ nav {
   cursor: pointer;
 }
 .footer__button:hover {
-  background-color: #d29819;
+  background-color: #f5f5dc;
+  color: #161616;
 }
 
 .signup {

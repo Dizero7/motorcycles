@@ -18,6 +18,7 @@
     cursor: pointer;
     &:hover {
       background-color: $light-hover;
+			color: $primary;
     }
   }
 }
