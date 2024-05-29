@@ -119,9 +119,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
 
-  & img{
-		height: 100%;
-	}
   & p {
 		background-color: $primary;
     font-size: 1.2rem;
